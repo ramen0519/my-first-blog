@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-o1d4(!-50dun$jvm2n&tugy5i97amqm*2dp(vp-onsh0#3kal=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', '10.0.2.2','.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'blog'
+    'blog',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -99,7 +100,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+    ],
+    'PAGE_SIZE': 10
+}
 # Internationalization
 # https://docs.djangoproject.com/en/6.0/topics/i18n/
 
